@@ -1,0 +1,10 @@
+<class_libraries>
+  <library path="lib/libperlinnoise">
+    <class name="PerlinNoiseFilterResult" type="perlin_noise_filters::PerlinNoiseFilter"
+            base_class_type="filters::FilterBase<double>">
+      <description>
+        This is a Perlin Noise filter that takes an array of doubles (subject to change)
+      </description>
+    </class>
+  </library>
+</class_libraries>
