@@ -4,7 +4,7 @@
   <version>0.0.0</version>
   <description>The perlin_noise_filter package</description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="jakedex@todo.todo">jakedex</maintainer>
@@ -40,15 +40,19 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
+    
   <build_depend>pluginlib</build_depend>
   <build_depend>roscpp</build_depend>
+  <build_depend>filters</build_depend>
+
   <run_depend>pluginlib</run_depend>
   <run_depend>roscpp</run_depend>
+  <run_depend>filters</run_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
-    <perlin_noise_filter plugin="${prefix}/plugin_description_file.xml" />
+    <filters plugin="${prefix}/plugin_description_file.xml" />
   </export>
 </package>

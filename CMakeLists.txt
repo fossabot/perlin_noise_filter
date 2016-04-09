@@ -7,6 +7,7 @@ project(perlin_noise_filter)
 find_package(catkin REQUIRED COMPONENTS
   pluginlib
   roscpp
+	filters
 )
 
 ## System dependencies are found with CMake's conventions
@@ -100,9 +101,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-#  LIBRARIES perlin_noise_filter
-#  CATKIN_DEPENDS pluginlib roscpp
-#  DEPENDS system_lib
+  LIBRARIES perlin_noise_filter
+	CATKIN_DEPENDS pluginlib roscpp filters
+	DEPENDS
 )
 
 ###########
@@ -116,10 +117,13 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-## Declare a C++ library
+# ## Declare a C++ library
+# add_library(perlin_noise_filter src/perlin_noise.cpp)
+# ## Specify libraries to link a library or executable target against
+# target_link_libraries(perlin_noise_filter ${catkin_LIBRARIES})
+
 add_library(perlin_noise_filter src/perlin_noise.cpp)
-#   src/${PROJECT_NAME}/perlin_noise_filter.cpp
-# )
+target_link_libraries(perlin_noise_filter ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -132,11 +136,6 @@ add_library(perlin_noise_filter src/perlin_noise.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(perlin_noise_filter_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Specify libraries to link a library or executable target against
-# target_link_libraries(perlin_noise_filter_node
-#   ${catkin_LIBRARIES}
-# )
 
 #############
 ## Install ##
@@ -153,11 +152,11 @@ add_library(perlin_noise_filter src/perlin_noise.cpp)
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS perlin_noise_filter perlin_noise_filter_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+install(TARGETS perlin_noise_filter
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark cpp header files for installation
 install(DIRECTORY include/${PROJECT_NAME}/
@@ -167,11 +166,10 @@ install(DIRECTORY include/${PROJECT_NAME}/
 )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
+install(FILES
+  plugin_description_file.xml
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 
 #############
 ## Testing ##
