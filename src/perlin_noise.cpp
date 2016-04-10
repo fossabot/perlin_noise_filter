@@ -70,9 +70,11 @@ double PerlinNoise::Noise(double x, double y, double z) {
 void PerlinNoise::InitGradients() {
   for (int i = 0; i < GradientSizeTable; i++)
     {
-      double z = (float)1 - (float)2 * ((double)rand()/(double)RAND_MAX);
+      // double z = (float)1 - (float)2 * ((double)rand()/(double)RAND_MAX);
+      double z = (float)1 - (float)2 * .5;
       double r = sqrt((float)1 - z * z);
-      double theta = 2 * M_PI * ((double)rand()/(double)RAND_MAX);
+      // double theta = 2 * M_PI * ((double)rand()/(double)RAND_MAX);
+      double theta = 2 * M_PI * .5;
 
       _gradients[i * 3] = r * cos(theta);
       _gradients[i * 3 + 1] = r * sin(theta);

@@ -18,7 +18,7 @@ public:
   bool update( const double & data_in, double & data_out);
 
 private:
-  PerlinNoise *perlinGen_;
+  PerlinNoise * perlinGen_;
   int perlin_seed_;
 
 };

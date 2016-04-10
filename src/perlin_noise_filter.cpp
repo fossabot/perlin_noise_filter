@@ -10,21 +10,22 @@ PerlinNoiseFilter::~PerlinNoiseFilter()
 
 bool PerlinNoiseFilter::configure()
 {
-  // bool found_seed_param = getParam("perlin_seed", perlin_seed_);
-  //
-  // if(!found_seed_param)
-  // {
-  //   perlin_seed_ = std::rand();
-  // }
+  bool found_seed_param = getParam("perlin_seed", perlin_seed_);
 
-  PerlinNoise *perlinGen_ = new PerlinNoise(100);
-  // perlin_noise_filter::PerlinNoise perlinGen_ = new perlin_noise_filter::PerlinNoise(perlin_seed_);
+  if(!found_seed_param)
+  {
+    perlin_seed_ = std::rand();
+  }
+
+  perlinGen_ = new PerlinNoise(perlin_seed_);
+  // perlinGen_ = new PerlinNoise(10000);
   return true;
 }
 
 bool PerlinNoiseFilter::update(const double & input, double & output)
 {
     output = perlinGen_->Noise(input, 0, 0);
+    // output = perlinGen_->Noise(.9, 0, 0);
     return true;
 };
 

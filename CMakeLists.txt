@@ -101,7 +101,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES perlin_noise_filter perlin_noise
+  LIBRARIES perlin_noise_filter
 	CATKIN_DEPENDS pluginlib roscpp filters
 	DEPENDS
 )
@@ -121,10 +121,10 @@ include_directories(
 # add_library(perlin_noise_filter src/perlin_noise.cpp)
 # ## Specify libraries to link a library or executable target against
 # target_link_libraries(perlin_noise_filter ${catkin_LIBRARIES})
-add_library(perlin_noise src/perlin_noise.cpp)
-target_link_libraries(perlin_noise ${catkin_LIBRARIES})
+# add_library(perlin_noise src/perlin_noise.cpp)
+# target_link_libraries(perlin_noise ${catkin_LIBRARIES})
 
-add_library(perlin_noise_filter src/perlin_noise_filter.cpp)
+add_library(perlin_noise_filter src/perlin_noise.cpp src/perlin_noise_filter.cpp)
 target_link_libraries(perlin_noise_filter ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the library
@@ -155,7 +155,7 @@ target_link_libraries(perlin_noise_filter ${catkin_LIBRARIES})
 # )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS perlin_noise_filter perlin_noise
+install(TARGETS perlin_noise_filter
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
