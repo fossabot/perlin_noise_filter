@@ -22,11 +22,11 @@ bool PerlinNoiseFilter::configure()
   return true;
 }
 
-bool PerlinNoiseFilter::update(const double & input, double & output)
+bool PerlinNoiseFilter::update(const std::vector<double> &data_in, std::vector<double> &data_out)
 {
-    output = perlinGen_->Noise(input, 0, 0);
+    data_out[0] = perlinGen_->Noise(data_in[0], data_in[1], data_in[2]);
     // output = perlinGen_->Noise(.9, 0, 0);
     return true;
 };
 
-PLUGINLIB_REGISTER_CLASS(PerlinNoiseDouble, perlin_noise_filters::PerlinNoiseFilter, filters::FilterBase<double>)
+PLUGINLIB_REGISTER_CLASS(PerlinNoiseDouble, perlin_noise_filters::PerlinNoiseFilter, filters::MultiChannelFilterBase<double>)

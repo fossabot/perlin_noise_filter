@@ -9,13 +9,13 @@
 
 namespace perlin_noise_filters {
 
-class PerlinNoiseFilter: public filters::FilterBase<double>
+class PerlinNoiseFilter: public filters::MultiChannelFilterBase<double>
 {
 public:
   PerlinNoiseFilter();
   ~PerlinNoiseFilter();
   bool configure();
-  bool update( const double & data_in, double & data_out);
+  bool update( const std::vector<double> &data_in, std::vector<double> &data_out);
 
 private:
   PerlinNoise * perlinGen_;
