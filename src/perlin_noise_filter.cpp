@@ -18,14 +18,13 @@ bool PerlinNoiseFilter::configure()
   }
 
   perlinGen_ = new PerlinNoise(perlin_seed_);
-  // perlinGen_ = new PerlinNoise(10000);
+  
   return true;
 }
 
 bool PerlinNoiseFilter::update(const std::vector<double> &data_in, std::vector<double> &data_out)
 {
     data_out[0] = perlinGen_->Noise(data_in[0], data_in[1], data_in[2]);
-    // output = perlinGen_->Noise(.9, 0, 0);
     return true;
 };
 
