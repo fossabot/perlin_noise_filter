@@ -1,9 +1,6 @@
 #ifndef PERLIN_NOISE_FILTER_H
 #define PERLIN_NOISE_FILTER_H
-// #include <stdint.h>
-// #include <cstring>
-// #include <stdio.h>
-// #include <boost/scoped_ptr.hpp>
+
 #include "filters/filter_base.h"
 #include "perlin_noise_filter/perlin_noise.h"
 

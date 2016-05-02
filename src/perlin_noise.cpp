@@ -1,5 +1,4 @@
 #include "perlin_noise_filter/perlin_noise.h"
-// #include <iostream>
 
 const unsigned char PerlinNoise::_perm[PerlinNoise::GradientSizeTable] = {
   225,155,210,108,175,199,221,144,203,116,70,213,69,158,33,252,
@@ -115,8 +114,3 @@ double PerlinNoise::Smooth(double x) {
 
   return x * x * (3 - 2 * x);
 }
-
-// int main() {
-//   PerlinNoise *perlin = new PerlinNoise(10000);
-//   std::cout << perlin->Noise(.9, 0, 0) << std::endl;
-// }

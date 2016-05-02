@@ -1,19 +1,12 @@
 <?xml version="1.0"?>
 <package>
   <name>perlin_noise_filter</name>
-  <version>0.0.0</version>
-  <description>The perlin_noise_filter package</description>
+  <version>0.0.1</version>
+  <description>This is a ROS filter that takes vector of x,y,z values as input
+  and updates given output vector with the result of the Perlin Noise function.</description>
 
-  <!-- One maintainer tag required, multiple allowed, one person per tag -->
-  <!-- Example:  -->
-  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="jakedex@todo.todo">jakedex</maintainer>
-
-
-  <!-- One license tag required, multiple allowed, one license per tag -->
-  <!-- Commonly used license strings: -->
-  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <maintainer email="jdexheimer@wisc.edu">Jake Dexheimer</maintainer>
+  <license>MIT</license>
 
 
   <!-- Url tags are optional, but mutiple are allowed, one per tag -->
@@ -25,7 +18,7 @@
   <!-- Author tags are optional, mutiple are allowed, one per tag -->
   <!-- Authors do not have to be maintianers, but could be -->
   <!-- Example: -->
-  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+  <author email="jdexheimer@wisc.edu">Jake Dexheimer</author>
 
 
   <!-- The *_depend tags are used to specify dependencies -->
@@ -40,7 +33,7 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-    
+
   <build_depend>pluginlib</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>filters</build_depend>

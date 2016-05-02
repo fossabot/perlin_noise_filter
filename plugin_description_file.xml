@@ -3,7 +3,8 @@
     <class name="PerlinNoiseDouble" type="perlin_noise_filters::PerlinNoiseFilter"
             base_class_type="filters::MultiChannelFilterBase<double>">
       <description>
-        This is a Perlin Noise filter that takes an array of doubles (subject to change)
+        This is a ROS filter that takes vector of x,y,z values as input
+        and updates given output vector with the result of the Perlin Noise function.
       </description>
     </class>
   </library>
