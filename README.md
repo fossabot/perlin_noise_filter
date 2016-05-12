@@ -7,7 +7,7 @@ and updates given output vector with the result of the [Perlin Noise function](h
 
 ## Getting Started
 
-The Perlin Noise Filter, as with all [ROS filters](http://wiki.ros.org/filters), is configured from parameters on the [Parameter server](Parameter Server).
+The Perlin Noise Filter, as with all [ROS filters](http://wiki.ros.org/filters), is configured from parameters on the [Parameter server](http://wiki.ros.org/Parameter%20Server).
 
 ##### Parameters
 
