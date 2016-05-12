@@ -69,4 +69,4 @@ After sourcing /path/to/your/catkin_ws/devel/setup.bash you should now be able t
 
 ## License
 
-This project is licensed under the BSD License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the BSD License - see the [LICENSE.txt](LICENSE.txt) file for details
