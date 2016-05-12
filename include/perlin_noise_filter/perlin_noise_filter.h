@@ -12,7 +12,7 @@ public:
   PerlinNoiseFilter();
   ~PerlinNoiseFilter();
   bool configure();
-  bool update( const std::vector<double> &data_in, std::vector<double> &data_out);
+  bool update( const std::vector<double> &data_in, std::vector<double> &data_out );
 
 private:
   PerlinNoise * perlinGen_;

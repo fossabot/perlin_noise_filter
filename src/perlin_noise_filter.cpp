@@ -12,13 +12,14 @@ bool PerlinNoiseFilter::configure()
 {
   bool found_seed_param = getParam("perlin_seed", perlin_seed_);
 
+  // No seed provided, use random
   if(!found_seed_param)
   {
     perlin_seed_ = std::rand();
   }
 
   perlinGen_ = new PerlinNoise(perlin_seed_);
-  
+
   return true;
 }
 
