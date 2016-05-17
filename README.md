@@ -40,13 +40,13 @@ filter_params:
 
 Make sure you have sourced the correct `setup.bash` file for your ROS distribution already
 
-Go to workspace src space
+Go to workspace src directory
 
 ```
 cd /path/to/your/catkin_ws/src
 ```
 
-Checkout the perlin_noise_function repository
+Checkout the perlin_noise_filter repository
 
 ```
 git clone https://github.com/jakedex/perlin_noise_filter
