@@ -7,7 +7,7 @@ and updates given output vector with the result of the [Perlin Noise function](h
 
 ## Getting Started
 
-The Perlin Noise Filter, as with all [ROS filters](http://wiki.ros.org/filters), is configured from parameters on the [Parameter server](Parameter Server).
+The Perlin Noise Filter, as with all [ROS filters](http://wiki.ros.org/filters), is configured from parameters on the [Parameter server](http://wiki.ros.org/Parameter%20Server).
 
 ##### Parameters
 
@@ -69,4 +69,4 @@ After sourcing /path/to/your/catkin_ws/devel/setup.bash you should now be able t
 
 ## License
 
-This project is licensed under the BSD License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the BSD License - see the [LICENSE.txt](LICENSE.txt) file for details
