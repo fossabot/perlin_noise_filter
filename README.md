@@ -1,4 +1,6 @@
 # Perlin Noise Filter
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FWisc-HCI%2Fperlin_noise_filter.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FWisc-HCI%2Fperlin_noise_filter?ref=badge_shield)
+
 
 A [ROS filter](http://wiki.ros.org/filters) that takes a vector of x,y,z values as input
 and updates given output vector with the result of the [Perlin Noise function](https://en.wikipedia.org/wiki/Perlin_noise).
@@ -70,3 +72,6 @@ After sourcing /path/to/your/catkin_ws/devel/setup.bash you should now be able t
 ## License
 
 This project is licensed under the BSD License - see the [LICENSE.txt](LICENSE.txt) file for details
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FWisc-HCI%2Fperlin_noise_filter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FWisc-HCI%2Fperlin_noise_filter?ref=badge_large)
